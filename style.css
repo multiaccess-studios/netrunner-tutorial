@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #222;
+    padding: 0 10px
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+body>*+* {
+    margin-top: 1em;
+}
+
+img:not([src='credit.svg']):not([src='click.svg']) {
+    cursor: pointer;
+}
+
+dialog>img {
+    max-height: 90vh;
+    cursor: initial;
+}
+
+dialog {
+    padding: 0;
+}
+
+dialog::backdrop {
+    background-color: black;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+img[src="click.svg"],
+img[src="credit.svg"] {
+    display: inline;
+    height: 2ex;
+    vertical-align: baseline;
+    transform: translateY(0.2ex);
+}
+
+td>.ice {
+    transform: rotate(90deg);
+}
