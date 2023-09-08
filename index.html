@@ -80,9 +80,10 @@
     <p>
         While the corp has one fewer <img src="click.svg"> than the runner, they
         must make a mandatory draw at the start of each of their turns which
-        does not cost them a click. The runner only draws cards when they take
-        the basic action to draw a card, or use another card with a draw
-        instruction.
+        does not cost them a click. If the corps deck is empty when they are
+        forced to draw for turn, they lose the game. The runner only draws cards
+        when they take the basic action to draw a card, or use another card with
+        a draw instruction.
     </p>
     <p>
         When a card is installed it is placed into the play area, and will
@@ -208,7 +209,7 @@
         damage to the runner. When the runner takes damage, they must randomly
         discard a number of cards from their hand equal to the amount of damage
         taken. If they must discard more cards than are in their hand, they lose
-        the game. Others subroutines give the corp a benefit, like gaining
+        the game. Other subroutines give the corp a benefit, like gaining
         credits or allowing them to install extra Ice. By far the most
         common and impactful subroutine is the humble "End the run."
     </p>
@@ -338,7 +339,7 @@
         is more than the Cleavers three strength. The runner uses the cleavers
         second paid ability, spending 2 credits to increase the Cleavers
         strength by one. The cleaver now has four strength, which is equal to or
-        greater than the Palisades three strength, and thus the runner can spend
+        greater than the Palisades four strength, and thus the runner can spend
         one more credit to use the Cleavers first paid ability, breaking up to
         two barrier subroutines. Palisade is a barrier, and so the runner
         targets the Palisades first (and only) subroutine: "End the run."
@@ -484,9 +485,9 @@
     <h2>Run Events</h2>
     <p>
         Red Team is not the only card with an ability that instructs the runner
-        to run a server. Run Events allow the to make a run without using their
-        basic action to run any server. These Events give additional upsides to
-        the runner during or after that run.
+        to run a server. Run Events allow the Runner to make a run without using
+        their basic action to run any server. These Events give additional
+        upsides to the runner during or after that run.
     </p>
     <table>
         <tr>
