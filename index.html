@@ -78,6 +78,13 @@
         <li><img src="click.svg"> <img src="credit.svg">: Advance an installed card. (corp only)</li>
     </ul>
     <p>
+        On either players turn, each player may activate paid abilities (which
+        always have the format "cost: instructions"), by paying the cost at any
+        time. When a player has no clicks left and neither player has any paid
+        abilities they wish to activate, the game advances to the other players
+        turn. Each player alternates turns until one player has won the game.
+    </p>
+    <p>
         While the corp has one fewer <img src="click.svg"> than the runner, they
         must make a mandatory draw at the start of each of their turns which
         does not cost them a click. If the corps deck is empty when they are
@@ -120,11 +127,17 @@
         </tr>
     </table>
     <p>
-        Each agenda has two main printed numbers both in the top half of the
-        card overlapping its art box. The one in the top right is the
-        "advancement requirement" of the agenda, the one in the bottom left is
-        the "agenda point value" of the agenda.
+        Each Agenda has two printed numbers both in the top half of the card
+        overlapping its art box. In the top right is the "Advancement
+        Requirement" and in the bottom left is the "Agenda Point Value".
     </p>
+    <table>
+        <table>
+            <tr>
+                <td><img src="agenda.png"></td><td></td><td></td>
+            </tr>
+        </table>
+    </table>
     <p>
         In order for the corporation to score the agenda, it must have a number
         of advancement counters on the card equal to or greater than the
@@ -180,15 +193,18 @@
         </tr>
     </table>
     <p>
-        Ice is installed rotated 90 degrees, which is why their art and their
-        strength number (bottom left) are sideways in the above images.
+        Each Ice has two printed numbers in its corners. In the top left is the
+        "Rez Cost" of the Ice, and in the bottom left is the "Strength" of the
+        ice. The strength number, like the card art, is rotated to make it
+        easier to read as Ice is installed rotated 90 degrees.
     </p>
-    <p>
-        Like agendas, Ice have two printed numbers. One in the top left of the
-        card, and the other in the bottom left rotated sideways. The number in
-        the top left of the card is the Ices "rez cost", and the sideways number
-        in the bottom left of the card is the Ices "strength".
-    </p>
+    <table>
+        <table>
+            <tr>
+                <td><img src="ice.png"></td><td></td><td></td>
+            </tr>
+        </table>
+    </table>
     <p>
         Like all corp cards, Ice is installed facedown and inactive. In order to
         use Ice to protect a server it must be rezzed.
@@ -196,12 +212,12 @@
         During a run on a server, the runner will approach and then encounter
         each piece of Ice protecting the server root, from the outermost to the
         innermost Ice. When they approach unrezzed Ice, the corp may pay the
-        printed rez cost to rez that Ice, turning it face up and activating it.
-        Any rezzed Ice that is approached is encountered.
+        printed rez cost in credits to rez that Ice, turning it face up and
+        activating it. Any rezzed Ice that is approached is encountered.
     </p>
     <p>
         The primary feature of Ice is subroutines. When the runner encounters
-        Ice, the corporation may fire (use) the subroutines on that Ice in the
+        Ice, the corporation fires (uses) the subroutines on that Ice in the
         order they are written.
     </p>
     <p>
@@ -220,8 +236,8 @@
     </p>
     <h2>Icebreakers</h2>
     <p>
-        Before subroutines fire, the runner has the opportunity to break them.
-        Disabling them for the current encounter. This is done using a special
+        Before subroutines fire, the runner has the opportunity to break them:
+        disabling them for the current encounter. This is done using a special
         type of program card called Icebreakers. All the programs in the starter
         deck are Icebreakers.
     </p>
@@ -244,19 +260,25 @@
         </tr>
     </table>
     <p>
-        There are three numbers printed on programs. Two in the top left, and 
-        one in the bottom left. The larger top left number printed in the circle
-        is the programs install cost. The smaller number in the top left is the
-        programs memory cost. The number in the bottom left is the programs
-        strength.
+        There are three numbers printed on programs. Two in the top left are the
+        "Install Cost" and "Memory Cost", and the one in the bottom left is
+        "Strength".
     </p>
+    <table>
+        <table>
+            <tr>
+                <td><img src="icebreaker.png"></td><td></td><td></td>
+            </tr>
+        </table>
+    </table>
     <p>
-        In order to install a program, the runner must pay its install cost.
+        In order to install a program, the runner must pay its install cost in
+        credits.
     </p>
     <p>
         Each runner identity has a memory limit. For The Catalyst this is 4.
         After installing a program if the total memory cost of all installed
-        programs is greater than their identities memory limit, the runner must
+        programs is greater than their Identities memory limit, the runner must
         trash (discard) programs until the total memory cost of all installed
         programs is equal to or less than their identities memory limit.
     </p>
@@ -273,7 +295,7 @@
     </ul>
     <p>
         Icebreakers have "Interface" abilities printed on them. These abilities
-        can only be used during an encounter, when the Ice being encountered
+        can only be used during an encounter when the Ice being encountered
         has strength equal or less than the strength of the Icebreaker.
     </p>
     <p> 
@@ -408,12 +430,21 @@
     </table>
     <p>
         Events and Operations have one printed number in the top left, this is
-        their play cost.
+        their "play cost".
     </p>
+    <table>
+        <table>
+            <tr>
+                <td><img src="evop.png"></td><td></td><td></td>
+            </tr>
+        </table>
+    </table>
     <p>
         Both players can use the basic action to play a card from their hands,
-        paying the printed play cost on a card, and resolving its effects before
-        trashing the Event or Operation used.
+        paying the printed play cost on a card in credits, and resolving its
+        effects before trashing the Event or Operation used. By doing this, both
+        sides are able to draw or gain credits much more efficiently than they
+        could by using basic actions.
     </p>
     <h2>Economy Cards (Resources, Assets)</h2>
     <p>
@@ -443,20 +474,27 @@
         </tr>
     </table>
     <p>
-        Resources have their install cost printed in the top left. Assets have
-        a rez cost printed in the top left, and a trash cost printed in the
-        bottom right.
+        Both Resources and Assets have a number printed in the top left, this is
+        their "Install Cost" and "Rez Cost" respectively. Assets have another
+        number in the bottom right, this is their "Trash Cost".
     </p>
+    <table>
+        <tr>
+            <td><img src="resource.png"></td><td><img src="asset.png"></td><td></td>
+        </tr>
+    </table>
     <p>
         Assets must be rezzed for their abilities to be used. It does not cost
         anything to install an asset. Assets are installed in the root of a
         server in the same fashion as Agendas. A server may only have one Asset
-        OR one Agenda in its root.
+        OR one Agenda in its root. To rez an asset the corp must pay its printed
+        rez cost in credits, this can be done at any time (as if it was any
+        other paid ability).
     </p>
     <p>
-        If the runner accesses an asset, they may pay its pritned trash cost to
-        trash it: uninstalling it and sending it to the corporations discard
-        pile.
+        If the runner accesses an asset, they may pay its pritned trash cost in
+        credits to trash it: uninstalling it and sending it to the corporations
+        discard pile.
     </p>
     <h2>Central Servers</h2>
     <p>
@@ -518,8 +556,8 @@
         </tr>
     </table>
     <p>
-        The number in the top left is the install cost of a hardware card, and
-        must be paid to install it.
+        Printed costs on hardware are the same as on resources. Only an
+        "install cost" in the top left. Installation works the same.
     </p>
     <p>
         With that, you've now seen all of the cards in the runners starter deck.
@@ -548,6 +586,11 @@
         In the case of manegarm skunkworks, you will want to rez it at the last
         possible moment: after the runner has declared they will not jack out,
         but before they approach the root of the server.
+    </p>
+    <p>
+        Upgrades also have a printed trash cost in the bottom right, which works
+        the same as with assets. The runner may pay that cost in credits trash
+        the upgrade while accessing it.
     </p>
     <p>
         When breaching a server, all upgrades are accessed in addition to any
@@ -602,10 +645,7 @@
     <h2>Full Timing Structure</h2>
     <p>
         The following is a full timing structure, that you can reference if you
-        are confused about the order of events. Whoevers turn it is is
-        considered to be the active player, and they may order their conditional
-        abilities and use their paid abilities before the other player in each
-        timing window where it is possible.
+        are confused about the order of events. 
     </p>
     <p>
         <b>
@@ -613,6 +653,24 @@
             THINGS OCCURING WILL NOT BREAK THE GAME. ALL CARDS IN THE TUTORIAL
             ARE SIMPLE AND HAVE NO COMPLEX INTERACTIONS.
         </b>
+    </p>
+    <p>
+        Whoevers turn it is is considered to be the active player.
+    </p>
+    <p>
+        When a paid ability window opens, the active player gains priority and
+        may use any number of non-action paid abilities. Once they have made
+        all their actions they pass priority to the other player who will do the
+        same. Priority is passed between players until a player receives
+        priority from the other player and immediately passes without activating
+        any paid abilities, or using any other abilities (rezzing/scoring) that
+        are available in that paid ability window.
+    </p>
+    <p>
+        When conditional abilities meet their trigger condition, the active
+        player must order and resolve all of their conditional abilities before
+        the inactive player. This happens between each timing step where
+        conditional abilities have met their trigger conditions.
     </p>
     <p>
         Any paid ability that has a cost which begins with "<img src="click.svg">"
@@ -627,34 +685,34 @@
     <ol>
         <li>Each player takes 5 credits.</li>
         <li>Each player draws 5 cards.</li>
-        <li>The corp may mulligan, shuffling their hand back into their deck and drawing 5 more cards.</li>
-        <li>The runner may mulligan, shuffling their hand back into their deck and drawing 5 more cards.</li>
+        <li>The corp may mulligan, shuffling their hand back into their deck then drawing 5.</li>
+        <li>The runner may mulligan, shuffling their hand back into their deck then drawing 5.</li>
         <li>Go to The Corp's Turn.</li>
     </ol>
     <h3>The Corp's Turn</h3>
     <ol>
-        <li>The corp gains <img src="click.svg"><img src="click.svg"><img src="click.svg"></li>
-        <li>Players may activate paid abilities, the corp may rez non-ice and score agendas.</li>
+        <li>The corp gains <img src="click.svg"><img src="click.svg"><img src="click.svg">.</li>
+        <li>Paid ability window, the corp may rez non-ice and score agendas.</li>
         <li>The corps turn begins, "when your turn begins" conditions are met.</li>
         <li>The corp draws 1 card.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice and score agendas.</li>
+        <li>Paid ability window, the corp may rez non-ice and score agendas.</li>
         <li>If the corp has unspent clicks, they must take an action. Otherwise go to step 8.</li>
         <li>Go to step 5.</li>
         <li>The corp discards cards until they have 5 in hand.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice.</li>
+        <li>Paid ability window, the corp may rez non-ice.</li>
         <li>The corp's turn ends.</li>
         <li>Go to The Runner's Turn.</li>
     </ol>
     <h3>The Runner's Turn</h3>
     <ol>
         <li>The runner gains <img src="click.svg"><img src="click.svg"><img src="click.svg"><img src="click.svg">.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice.</li>
+        <li>Paid ability window, the corp may rez non-ice.</li>
         <li>The runners turn begins, "when your turn begins" conditions are met.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice.</li>
+        <li>Paid ability window, the corp may rez non-ice.</li>
         <li>If the runner has unspent clicks, they must take an action. Otherwise go to step 7.</li>
         <li>Go to step 4.</li>
         <li>The runner discards until they have 5 in hand.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice.</li>
+        <li>Paid ability window, the corp may rez non-ice.</li>
         <li>The runner's turn ends.</li>
         <li>Go to The Corp's Turn</li>
     </ol>
@@ -668,23 +726,23 @@
     <h4>Approach Ice</h4>
     <ol>
         <li>The runner approaches the ice at their position.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice, or the approached ice.</li>
+        <li>Paid ability window, the corp may rez non-ice, or the approached ice.</li>
         <li>If the approached ice is rezzed, go to Encounter Ice. Otherwise go to Movement.</li>
     </ol>
     <h4>Encounter Ice</h4>
     <ol>
         <li>The runner encounters the ice at their position.</li>
-        <li>Players may activate paid abilities. The Interface condition can be met.</li>
+        <li>Paid ability window. The Interface condition can be met.</li>
         <li>The corp fires unbroken subroutines.</li>
         <li>Go to Movement.</li>
     </ol>
     <h4>Movement</h4>
     <ol>
         <li>If you came here from Approach/Encounter Ice, pass the ice at the runners position.</li>
-        <li>Players may activate paid abilities.</li>
+        <li>Paid ability window.</li>
         <li>The runner may jack out.</li>
         <li>The runner moves 1 position inward, if possible.</li>
-        <li>Players may activate paid abilities, the corp may rez non-ice.</li>
+        <li>Paid ability window, the corp may rez non-ice.</li>
         <li>If the runner moved to a new Ice, go to Approach Ice. Otherwise go to Success.</li>
     </ol>
     <h4>Success</h4>
