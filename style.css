@@ -2,6 +2,7 @@ table {
     width: 100%;
     table-layout: fixed;
     margin: 0 auto;
+    break-inside: avoid-page;
 }
 
 

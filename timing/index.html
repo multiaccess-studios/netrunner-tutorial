@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netrunner Timing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        .w-panel {
+            width: 30rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex p-4 gap-10 w-max relative ">
+        <div class="w-panel flex flex-col gap-1">
+            <div class="bg-blue-900 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-xl underline relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">5.6</span>
+                    The Corp's Turn
+                </div>
+            </div>
+
+            <div class="ml-4 mt-2 bg-blue-700 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.1</span>
+                    Draw Phase
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                    The Corp gains their allotted clicks
+                </div>
+            </div>
+            <div class="ml-8 bg-blue-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                    A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span> occurs, in
+                    which
+                </div>
+                <ul class="bg-blue-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                    <li>Players may use paid abilities</li>
+                    <li>The Corp may rez non-ice cards</li>
+                    <li>The Corp may score agendas</li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                    The Corp's recurring credits refill
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                    The Corp's turn formally begins
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.e</span>
+                    The Corp performs their mandatory draw
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.f</span>
+                    Play proceeds to the
+                    <span class="bg-blue-700 text-white rounded-lg px-1 font-bold">Action Phase</span>
+
+                </div>
+            </div>
+
+            <div class="ml-4 mt-2 bg-blue-700 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.2</span>
+                    Action Phase
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                    A <span class="bg-black px-1 py-0.5">paid ability window</span> occurs, in which
+                </div>
+                <ul class="bg-blue-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                    <li>Players may use paid abilities</li>
+                    <li>The Corp may rez non-ice cards</li>
+                    <li>The Corp may score agendas</li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-blue-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                    Does the Corp have any unspent clicks?
+                </div>
+                <ul class="bg-blue-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                    <li><span
+                            class="text-white px-1 rounded-lg bg-blue-500 font-bold inline-block w-9 text-center">Yes</span>
+                        The Corp <span class="bg-black px-1 py-0.5 text-white font-bold">takes an action</span>
+                    </li>
+                    <li class="relative">
+                        <span
+                            class="text-white px-1 rounded-lg bg-blue-500 font-bold inline-block w-9 text-center">No</span>
+                        Skip to 5.6.2.d
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                    Return to 5.6.2.a
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                    Play proceeds to the
+                    <span class="bg-blue-700 text-white rounded-lg px-1 font-bold">Discard Phase</span>
+                </div>
+            </div>
+
+            <div class="ml-4 mt-2 bg-blue-700 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.3</span>
+                    Discard Phase
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                    The Corp discards to their maximum hand size
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                    A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span> opens, in
+                    which
+                </div>
+                <ul class="bg-blue-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                    <li>Players may use paid abilities</li>
+                    <li>The Corp may rez non-ice cards</li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-blue-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                    Does the Corp have any unspent clicks?
+                </div>
+                <ul class="bg-blue-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                    <li><span
+                            class="text-white px-1 rounded-lg bg-blue-500 font-bold inline-block w-9 text-center">Yes</span>
+                        The Corp loses those clicks
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                    The Corp's turn formally ends
+                </div>
+            </div>
+
+            <div class="ml-8 bg-blue-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.e</span>
+                    Play proceeds to
+                    <span class="bg-red-900 text-white rounded-lg px-1 font-bold">The Runner's Turn</span>
+                </div>
+            </div>
+
+
+            <div class="w-panel flex flex-col gap-1 mt-7">
+                <div class="bg-yellow-900 rounded-xl uppercase">
+                    <div class="py-2 px-4 text-white font-bold text-center text-xl underline relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">7.2</span>
+                        Accessing a Card
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-yellow-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.1</span>
+                        The card is accessed
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-yellow-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.2</span>
+                        The Runner may use a single <span class="bg-black px-1 py-0.5 text-white font-bold">mid-access
+                            ability</span>
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-yellow-500 rounded-xl">
+                    <div class="py-2 px-4 text-white font-bold relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.3</span>
+                        Is the accessed card an Agenda?
+                    </div>
+                    <ul class="bg-yellow-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                        <li><span
+                                class="text-white px-1 rounded-lg bg-yellow-500 font-bold inline-block w-9 text-center">Yes</span>
+                            The Runner must <span class="bg-black px-1 py-0.5 text-white font-bold">steal it</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ml-4 bg-yellow-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.4</span>
+                        The access is complete
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="w-panel flex flex-col gap-1">
+            <div class="bg-red-900 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-xl underline relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">5.7</span>
+                    The Runner's Turn
+                </div>
+            </div>
+
+            <div class="ml-4 mt-2 bg-red-700 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.1</span>
+                    Action Phase
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                    The Runner gains allotted clicks
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                    A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span> occurs, in
+                    which
+                </div>
+                <ul class="bg-red-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                    <li>Players may use paid abilities</li>
+                    <li>The Corp may rez non-ice cards</li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                    The Runner's recurring credits refill
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                    The Runner's turn formally begins
+                </div>
+            </div>
+
+
+            <div class="ml-8 bg-red-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.e</span>
+                    A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span> occurs, in
+                    which
+                </div>
+                <ul class="bg-red-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                    <li>Players may use paid abilities</li>
+                    <li>The Corp may rez non-Ice cards</li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-red-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.f</span>
+                    Does the Runner have any unspent clicks?
+                </div>
+                <ul class="bg-red-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                    <li><span
+                            class="text-white px-1 rounded-lg bg-red-500 font-bold inline-block w-9 text-center">Yes</span>
+                        The Runner <span class="bg-black px-1 py-0.5 text-white font-bold">takes an action</span>
+                    </li>
+                    <li class="relative">
+                        <span
+                            class="text-white px-1 rounded-lg bg-red-500 font-bold inline-block w-9 text-center">No</span>
+                        Skip to 5.7.1.h
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.g</span>
+                    Return to 5.7.1.e
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.h</span>
+                    Play proceeds to the
+                    <span class="bg-red-900 text-white rounded-lg px-1 font-bold">Discard Phase</span>
+                </div>
+            </div>
+
+
+            <div class="ml-4 mt-2 bg-red-700 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.2</span>
+                    Discard Phase
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                    The Runner discards to their maximum hand size
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                    A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span> opens, in
+                    which
+                </div>
+                <ul class="bg-red-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                    <li>The Corp may rez non-ice cards</li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-red-500 rounded-xl">
+                <div class="py-2 px-4 text-white font-bold relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                    Does the Runner have any unspent clicks?
+                </div>
+                <ul class="bg-red-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                    <li><span
+                            class="text-white px-1 rounded-lg bg-red-500 font-bold inline-block w-9 text-center">Yes</span>
+                        The Runner loses those clicks
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                    The Runner's turn formally ends
+                </div>
+            </div>
+
+            <div class="ml-8 bg-red-200 rounded-xl">
+                <div class="py-2 px-4 relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                    Play proceeds to <span class="bg-blue-900 text-white rounded-lg px-1 font-bold">The Corp's
+                        Turn</span>
+                </div>
+            </div>
+
+
+            <div class="w-panel flex flex-col gap-1 mt-7">
+                <div class="bg-green-900 rounded-xl uppercase">
+                    <div class="py-2 px-4 text-white font-bold text-center text-xl underline relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">7.5</span>
+                        Breaching a Server
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-green-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.1</span>
+                        Breach the server formally begins
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-green-500 rounded-xl">
+                    <div class="py-2 px-4 text-white font-bold relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.2</span>
+                        Is the breached server Archives?
+                    </div>
+                    <ul class="bg-green-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                        <li><span
+                                class="text-white px-1 rounded-lg bg-green-500 font-bold inline-block w-9 text-center">Yes</span>
+                            Turn all cards in the Corp's discard pile faceup</li>
+                    </ul>
+                </div>
+
+                <div class="ml-4 bg-green-500 rounded-xl">
+                    <div class="py-2 px-4 text-white font-bold relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.3</span>
+                        Is the brached server HQ or R&D?
+                    </div>
+                    <ul class="bg-green-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                        <li><span
+                                class="text-white px-1 rounded-lg bg-green-500 font-bold inline-block w-9 text-center">Yes</span>
+                            Determine the Runners random access limit</li>
+                    </ul>
+                </div>
+
+
+                <div class="ml-4 bg-green-500 rounded-xl">
+                    <div class="py-2 px-4 text-white font-bold relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.4</span>
+                        Can the runner choose an access candidate?
+                    </div>
+                    <ul class="bg-green-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                        <li><span
+                                class="text-white px-1 rounded-lg bg-green-500 font-bold inline-block w-9 text-center">Yes</span>
+                            The Runner chooses an access candidate.
+                        </li>
+                        <li class="relative"><span
+                                class="text-white px-1 rounded-lg bg-green-500 font-bold inline-block w-9 text-center">No</span>
+                            Skip to 7.5.7</li>
+                    </ul>
+                </div>
+
+                <div class="ml-4 bg-green-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.5</span>
+                        The Runner <span class="bg-yellow-900 text-white rounded-lg px-1 font-bold">Accesses</span>
+                        the
+                        chosen card
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-green-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.6</span>
+                        Return to 7.5.4
+                    </div>
+                </div>
+
+                <div class="ml-4 bg-green-200 rounded-xl">
+                    <div class="py-2 px-4 relative">
+                        <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.7</span>
+                        The breach is complete
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="flex flex-col gap-1">
+            <div class="bg-pink-900 rounded-xl uppercase">
+                <div class="py-2 px-4 text-white font-bold text-center text-xl underline relative">
+                    <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">6.9</span>
+                    Run Timing
+                </div>
+            </div>
+
+            <div class="grid gap-4" style="grid-template-columns:1fr 1fr;">
+
+                <div class="w-panel flex flex-col gap-1">
+
+                    <div class="ml-4 mt-2 bg-pink-700 rounded-xl uppercase">
+                        <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.1</span>
+                            Initiation Phase
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                            The Runner announces the attacked server
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                            The Runner gains bad publicity credits
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                            The run formally begins
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                            Is there ice protecting the attacked server?
+                        </div>
+                        <ul class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">Yes</span>
+                                Proceed to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Approach
+                                    Ice
+                                    Phase</span>
+                            </li>
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">No</span>
+                                Proceed to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Movement
+                                    Phase</span></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="ml-4 mt-2 bg-pink-700 rounded-xl uppercase">
+                        <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.2</span>
+                            Approach Ice Phase
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                            The approach begins
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                            A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span>
+                            occurs,
+                            in
+                            which
+                        </div>
+                        <ul class="bg-pink-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                            <li>Players may use paid abilities</li>
+                            <li>The Corp may rez non-ice cards</li>
+                            <li>The Corp can <span class="bg-black px-1 py-0.5 text-white font-bold">rez the
+                                    approached
+                                    piece of
+                                    ice</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                            Is the approached ice rezzed?
+                        </div>
+                        <ul
+                            class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">Yes</span>
+                                Continue to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Encounter
+                                    Ice Phase</span>
+                            </li>
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">No</span>
+                                Proceed to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Movement
+                                    Phase</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-4 mt-2 bg-pink-700 rounded-xl uppercase">
+                        <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.3</span>
+                            Encounter Ice Phase
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                            The encounter begins
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                            A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span>
+                            occurs,
+                            in
+                            which
+                        </div>
+                        <ul class="bg-pink-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                            <li>Players may use paid abilities</li>
+                            <li><span class="bg-black px-1 py-0.5 text-white font-bold">Subroutines can be
+                                    broken</span>
+                            </li>
+                            <!-- figure this out -->
+                        </ul>
+                    </div>
+
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                            Are there unbroken, unresolved subroutines?
+                        </div>
+                        <ul class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">Yes</span>
+                                The Corp <span class="bg-black px-1 py-0.5 text-white font-bold">resolves the next
+                                    such
+                                    subroutine</span></li>
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">No</span>
+                                Skip to 6.9.3.e</li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                            Return to 6.9.3.c
+                        </div>
+                    </div>
+
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.e</span>
+                            Continue to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Movement
+                                Phase</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="w-panel flex flex-col gap-1">
+
+                    <div class="ml-4 mt-2 bg-pink-700 rounded-xl uppercase">
+                        <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.4</span>
+                            Movement Phase
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                            Approached or Encountered Ice?
+                        </div>
+                        <ul class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">Yes</span>
+                                Pass that ice</li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                            A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span>
+                            opens,
+                            in
+                            which
+                        </div>
+                        <ul class="bg-pink-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                            <li>Players may only use paid abilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                            The runner may choose to <span class="bg-black px-1 py-0.5 text-white font-bold">jack
+                                out</span>.
+                            Did they?
+                        </div>
+                        <ul class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">Yes</span>
+                                Proceed to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Run
+                                    Ends
+                                    Phase</span></li>
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">No</span>
+                                Continue to 6.9.4.d</li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                            The Runner's position moves inward, if able
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.e</span>
+                            A <span class="bg-black px-1 py-0.5 text-white font-bold">paid ability window</span>
+                            opens,
+                            in
+                            which
+
+                        </div>
+                        <ul class="bg-pink-200 pl-8 pr-4 py-1 list-disc rounded-b-xl">
+                            <li>Players may use paid abilities</li>
+                            <li>The Corp may rez non-ice cards</li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.f</span>
+                            Did the Runner move inward?
+                        </div>
+                        <ul class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">Yes</span>
+                                Return to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Approach
+                                    Ice Phase</span></li>
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">No</span>
+                                Continue to 6.9.4.g
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.g</span>
+                            The runner approaches the attacked server
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.h</span>
+                            Continue to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Success
+                                Phase</span>
+                        </div>
+                    </div>
+
+                    <div class="ml-4 mt-2 bg-pink-700 rounded-xl uppercase">
+                        <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.5</span>
+                            Success Phase
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                            The run is declared successful
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                            The Runner <span class="bg-green-900 text-white rounded-lg px-1 font-bold">Breaches</span>
+                            attacked server
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                            Continue to the <span class="bg-pink-700 text-white rounded-lg px-1 font-bold">Run Ends
+                                Phase</span>
+                        </div>
+                    </div>
+
+                    <div class="ml-4 mt-2 bg-pink-700 rounded-xl uppercase">
+                        <div class="py-2 px-4 text-white font-bold text-center text-lg relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.6</span>
+                            Run Ends Phase
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.a</span>
+                            Complete any windows open when the run ended
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.b</span>
+                            The Runner loses any unspent bad publicity credits
+                        </div>
+                    </div>
+
+                    <div class="ml-8 bg-pink-500 rounded-xl">
+                        <div class="py-2 px-4 text-white font-bold relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.c</span>
+                            Was the Success Phase reached during this run?
+                        </div>
+                        <ul class="bg-pink-200 px-4 py-1 rounded-b-xl flex flex-col gap-1">
+                            <li><span
+                                    class="text-white px-1 rounded-lg bg-pink-500 font-bold inline-block w-9 text-center">No</span>
+                                The run becomes unsuccessful</li>
+                        </ul>
+                    </div>
+
+                    <div class="ml-8 bg-pink-200 rounded-xl">
+                        <div class="py-2 px-4 relative">
+                            <span class="text-xs absolute right-4 top-0 bottom-0 grid place-items-center">.d</span>
+                            The run is complete
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-4 right-4 font-bold text-right">
+            <div class="text-xl">
+                Compatible with Comprehensive Rules 23.08
+            </div>
+            <div class="text-4xl">
+                Netrunner Timing Chart v1
+            </div>
+            <div class="text-4xl">
+                By Lucille L. Blumire (@LLBlumire)
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
